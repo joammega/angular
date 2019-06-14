@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <span class="navbar-brand mb-0 h1">Navbar</span> 
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!--Dropdown Users-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkUsers" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Users
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkUsers">
+            <a class="dropdown-item" routerLink="register/user">Register Users</a> 
+            <a class="dropdown-item" routerLink="list/user">List Users</a>
+          </div>
+        </li>
+        <!--Dropdown Products-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkProducts" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Products
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkProducts">
+            <a class="dropdown-item" routerLink="register/product">Register Product</a>
+            <a class="dropdown-item" routerLink="list/product">List Products</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="collapse navbar-collapse justify-content-end">
+      <span style="color: white; font-weight: bold;">Hello, {{user.firstName}}!</span>
+      <button class="btn btn-secondary ml-2" (click)="logout()">Logout</button>
+    </div>
+    
+  </nav>

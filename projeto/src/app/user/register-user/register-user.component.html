@@ -1,0 +1,57 @@
+<div class="principal">
+    <div class="content">
+      <div class="box conteiner">
+        <div class="row justify-content-center pt-3">
+          <h3>Cadastro</h3>
+        </div>
+        <form (ngSubmit)="onSubmit()"  class="form-group mt-3">
+          <div class="row justify-content-center">
+              <label class="col-4" for="Nome">Nome</label>
+              <label class="col-4 ml-2" for="Sobrenome">Sobrenome</label>
+          </div>
+          <div class="row justify-content-center">
+            
+            <input type="" class="form-control col-4" id="Nome" placeholder="Nome" [(ngModel)]="user.nome"
+            [ngModelOptions]="{standalone: true}">
+            <input type="" class="form-control col-4 ml-2" id="Sobrenome" placeholder="Sobrenome" [(ngModel)]="user.sobrenome"
+            [ngModelOptions]="{standalone: true}">
+          </div>
+  
+          <div class="row justify-content-center">
+              <label class="col-8" for="Username">Username</label>
+          </div>
+          <div class="row justify-content-center">
+            
+            <input type="" class="form-control col-8" id="Username" placeholder="Username" [(ngModel)]="user.username"
+            [ngModelOptions]="{standalone: true}">
+          </div>
+  
+          <div class="row justify-content-center">
+              <label class="col-8" for="Email">Email</label>
+          </div>
+          <div class="row justify-content-center">
+            
+            <input type="" class="form-control col-8" id="Email" placeholder="Email" [(ngModel)]="user.email"
+            [ngModelOptions]="{standalone: true}">
+  
+          </div>
+          <div class="row justify-content-center">
+              <label class="col-8" for="Password">Password</label>
+              
+          </div>
+          <div class="row justify-content-center">
+            
+            <input type="" class="form-control col-8" id="Password" placeholder="Password"
+            [(ngModel)]="user.password"
+            [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="row justify-content-center mt-2">
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </div>
+        
+        </form>
+  
+  
+      </div>
+    </div>
+  </div>

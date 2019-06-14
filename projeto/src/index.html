@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ProjetoMini</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script language="JavaScript">
+    function input_mask(t, mask) {
+      var i = t.value.length;
+      var out = mask.substring(1, 0);
+      var text = mask.substring(i)
+      if (text.substring(0, 1) != out) {
+        t.value += text.substring(0, 1);
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>

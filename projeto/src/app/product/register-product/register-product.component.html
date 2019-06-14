@@ -1,0 +1,48 @@
+<h2>Register Product</h2>
+<hr>
+<form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm">
+    
+  <div class="form-group">
+    <label for="name" [ngClass]="{'text-danger': editForm.submitted && name.invalid }">Name</label>
+    <input type="text" class="form-control" name="name" id="name"
+    [(ngModel)]="product.name"
+    #name="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && name.invalid }">
+
+    <div *ngIf="name.invalid && editForm.submitted" class="text-danger mt-1">
+        <div *ngIf="name.errors['required']">Name is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="price" [ngClass]="{'text-danger': editForm.submitted && price.invalid }">Price</label>
+    <input type="text" class="form-control" name="price" id="price"
+    [(ngModel)]="product.price"
+    #price="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && price.invalid }" pattern="^\d*(\,\d{2}$)?">
+
+    <div *ngIf="price.invalid && editForm.submitted" class="text-danger mt-1">
+        <div *ngIf="price.errors['required']">Price is required.</div>
+        <div *ngIf="price.errors['pattern']">Price must be a valid currency (0,00).</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="qty" [ngClass]="{'text-danger': editForm.submitted && qty.invalid }">Quantity</label>
+    <input type="text" class="form-control" name="qty" id="qty"
+    [(ngModel)]="product.qty"
+    #qty="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && qty.invalid }" pattern="\d*">
+
+    <div *ngIf="qty.invalid && editForm.submitted" class="text-danger mt-1">
+        <div *ngIf="qty.errors['required']">Quantity is required.</div>
+        <div *ngIf="qty.errors['pattern']">Must be a valid INTEGER number.</div>
+    </div>
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary">Register</button>
+  
+
+</form>

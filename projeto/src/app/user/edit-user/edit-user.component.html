@@ -1,0 +1,89 @@
+<h2>Edit User</h2>
+<hr>
+<form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm">
+    
+  <div class="form-group">
+    <label for="login" [ngClass]="{'text-danger': editForm.submitted && login.invalid }">Login</label>
+    <input type="text" class="form-control" name="login" id="login"
+    [(ngModel)]="user.login"
+    #login="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && login.invalid }">
+
+    <div *ngIf="login.invalid && editForm.submitted" class="text-danger mt-1">
+        <div *ngIf="login.errors['required']">Login is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="firstName" [ngClass]="{'text-danger': editForm.submitted && firstName.invalid }">First Name</label>
+    <input type="text" class="form-control" name="firstName" id="firstName"
+    [(ngModel)]="user.firstName"
+    #firstName="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && firstName.invalid }">
+
+    <div *ngIf="firstName.invalid && editForm.submitted" class="text-danger mt-1">
+      <div *ngIf="firstName.errors['required']">First Name is required.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="lastName" [ngClass]="{'text-danger': editForm.submitted && lastName.invalid }">Last Name</label>
+    <input type="text" class="form-control" name="lastName" id="lastName"
+    [(ngModel)]="user.lastName"
+    #lastName="ngModel" required
+    [ngClass]="{ 'is-invalid': editForm.submitted && lastName.invalid }">
+
+    <div *ngIf="lastName.invalid && editForm.submitted" class="text-danger mt-1" >
+      <div *ngIf="lastName.errors['required']">Last Name is required.</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="email" [ngClass]="{'text-danger': editForm.submitted && email.invalid }">E-mail</label>
+    <input type="text" class="form-control" name="email" id="email"
+    [(ngModel)]="user.email"
+    #email="ngModel" required email
+    [ngClass]="{ 'is-invalid': editForm.submitted && email.invalid }">
+    
+    <div *ngIf="email.invalid && editForm.submitted" class="text-danger mt-1" >
+      <div *ngIf="email.errors['required']">E-mail is required.</div>
+      <div *ngIf="email.errors['email']">Must be a valid e-mail address.</div>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <label for="zipcode" [ngClass]="{'text-danger': editForm.submitted && zipcode.invalid }">Zipcode</label>
+    <input type="text" class="form-control" name="zipcode" id="zipcode"
+    [(ngModel)]="user.zipcode"
+    #zipcode="ngModel" required pattern="^[0-9]{5}(?:-[0-9]{3})?$"
+    placeholder="00000-000" onkeypress="input_mask(this,'#####-###')" maxlength="9"
+    [ngClass]="{ 'is-invalid': editForm.submitted && zipcode.invalid }">
+
+    <div *ngIf="zipcode.invalid && editForm.submitted" class="text-danger mt-1" >
+      <div *ngIf="zipcode.errors['required']">Zipcode is required.</div>
+      <div *ngIf="zipcode.errors['pattern']">Must be a valid zipcode.</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password" [ngClass]="{'text-danger': editForm.submitted && password.invalid }">Password</label>
+    <input type="password" class="form-control" name="password" id="password"
+    [(ngModel)]="user.password"
+    #password="ngModel" required minlength="6" 
+    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]+$" 
+    [ngClass]="{ 'is-invalid': editForm.submitted && password.invalid }">
+
+    <div *ngIf="password.invalid && editForm.submitted" class="text-danger mt-1" >
+      <div *ngIf="password.errors['required']">Password is required.</div>
+      <div *ngIf="password.errors['minlength']">Password must be at least 6 characters.</div>
+      <div *ngIf="password.errors['pattern']">Must be a valid password.</div> 
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Update</button>
+  
+
+</form>

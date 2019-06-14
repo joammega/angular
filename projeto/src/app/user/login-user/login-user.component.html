@@ -1,0 +1,61 @@
+<div class="moda" *ngIf="modal">
+    <div class="modacontent">
+        <div class="close pt-2 pr-2">
+            <span (click)="modal=false">X</span>
+        </div>
+        <div class="cabeca">
+
+            <p class="pt-4"><b>Login</b></p>
+            <p>Venha fazer parte da nossa comunidade</p>
+            
+        </div> 
+        <form (ngSubmit)="onsubimit()" class="form-group form mt-4">
+            <label for="E-mail">E-mail</label>
+            <input type="text" class="form-control" placeholder="E-mail" id="E-mail" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+            <label for="Password">Password</label>
+            <input type="password" class="form-control" placeholder="Password" id="Password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}">
+            <button type="submit" class="btn btn-primary mt-4 botao">Entrar</button>
+        </form>
+        <div class="footer mt-2" >
+            <p (click)="cadastro()">Ainda não é cadastrado? Clique aqui</p>
+        </div>
+    </div>
+</div>
+<div class="conteiner">
+
+    <div class="parte1 row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-1 mt-2 ml-4 logo">
+
+                </div>
+                <form action="" class="col-8 form-group">
+                    <input type="text" class="busca">
+                </form>
+
+                <div class="col-2 pt-2 ">
+                    <div class="login" (click)="modal = true" *ngIf="logado == false">
+                        Login
+                    </div>
+                    <div class="drop login" *ngIf="logado">
+                        <div class="dropbt" (click)="mudar()">
+                          Dropdown button
+                        </div>
+                        <div class="droper" *ngIf="tg">
+                          <div class="cont" >Action</div>
+                          <div class="cont" >Another action</div>
+                          <div class="cont" >Something else here</div>
+                        </div>
+                      </div>
+                </div>
+
+               
+
+            </div>
+        </div>
+    </div>
+    <div class="parte2 row">
+
+
+    </div>
+</div>

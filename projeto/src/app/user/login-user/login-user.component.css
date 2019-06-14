@@ -1,0 +1,100 @@
+.logo{
+    height: 60px;
+    background-image:url(../../images/Logo_FinDDesigner.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.parte1{
+    background-image: url(../../images/banner_u2.jpg);
+    height: 500px;
+}
+.login{
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+.moda{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(29, 29, 29, 0.466);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+.modacontent{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 400px;
+    width: 350px;
+    font-size: 12px;
+}
+.cabeca{
+    text-align: center;
+    font-size: 16px;
+}
+.form{
+    width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0)
+}
+.botao{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0)
+}
+.footer{
+    cursor: pointer;
+    text-align: center;
+    color: rgb(0, 174, 255)
+}
+.footer:hover{
+    text-decoration: underline;
+}
+.close{
+    text-align: right;
+    cursor: pointer;
+}
+.close span{
+    padding: 2px;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.336);
+    font-size: 18px;
+
+}
+.busca{
+    width: 70%;
+    background-color: transparent;
+    border: rgba(255, 255, 255, 0.842) solid 2px;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.dropbt{
+    user-select: none;
+
+}
+.droper{
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    
+}
+.cont{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 2px;
+}
+.cont:hover{
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px;
+}

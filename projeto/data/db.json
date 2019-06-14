@@ -1,0 +1,75 @@
+{
+  "users": [
+    {
+      "login": "jeff",
+      "firstName": "Jefferson de Carvalho",
+      "email": "jeffersoncarvalho@gmail.com",
+      "zipcode": "60040-206",
+      "lastName": "SILVA",
+      "password": "1234Ty",
+      "id": 3
+    },
+    {
+      "login": "dan",
+      "firstName": "Daniel",
+      "lastName": "Pierre Doido",
+      "email": "pierre@gmail.com",
+      "zipcode": "60040-206",
+      "password": "1234Ty",
+      "id": 4
+    },
+    {
+      "login": "marcus",
+      "firstName": "Marcus",
+      "lastName": "Mota",
+      "email": "marcao@gmail.com",
+      "zipcode": "60040-206",
+      "password": "1234Ty",
+      "id": 5
+    },
+    {
+      "login": "jeff",
+      "firstName": "Jefferson de Carvalho",
+      "email": "jeffersoncarvalho@gmail.com",
+      "zipcode": "60040-206",
+      "lastName": "SILVA",
+      "password": "1234Ty",
+      "id": 6
+    },
+    {
+      "login": "jeff",
+      "firstName": "Jefferson de Carvalho",
+      "email": "jeffersoncarvalho@gmail.com",
+      "zipcode": "60040-206",
+      "lastName": "SILVA",
+      "password": "1234Ty",
+      "id": 7
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "name": "book-two",
+      "price": "63,56",
+      "qty": "15"
+    },
+    {
+      "id": 1,
+      "name": "cd",
+      "price": "56,40",
+      "qty": 34
+    },
+    {
+      "id": 3,
+      "name": "toy",
+      "price": "90,12",
+      "qty": 72
+    },
+    {
+      "name": "coffe table",
+      "price": "34,46",
+      "qty": "3",
+      "id": 4
+    }
+  ]
+}
